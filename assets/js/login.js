@@ -37,7 +37,7 @@ const layer = layui.layer;
     e.preventDefault();
     $.ajax({
         type: "POST",
-        url: baseUrl + "/api/reguser",
+        url:"/api/reguser",
         data: {
             username: $("#form_reg [name=username]").val(),
             password: $("#form_reg [name=password]").val(),
@@ -57,7 +57,7 @@ const layer = layui.layer;
     
     $.ajax({
         type: "POST",
-        url: baseUrl + "/api/login",
+        url:"/api/login",
         data: $(this).serialize(),        
         success: (res) => {
             console.log(res);          
